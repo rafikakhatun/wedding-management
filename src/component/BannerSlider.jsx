@@ -38,7 +38,7 @@ const BannerSlider = () => {
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/10"></div>
-                    <div className="slide-content text-4xl lg:text-6xl tracking-wider absolute bottom-[25%] left-[10%] z-10 text-white">
+                    <div className="slide-content font-sans text-4xl lg:text-6xl tracking-wider absolute bottom-[25%] left-[10%] z-10 text-white">
                         Best Wedding Photographers In Kolkata
                     </div>
                 </SwiperSlide>
@@ -52,7 +52,7 @@ const BannerSlider = () => {
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/10"></div>
-                    <div className="slide-content text-4xl lg:text-6xl tracking-wider absolute bottom-[25%] left-[10%] z-10 text-white">
+                    <div className="slide-content font-sans text-4xl lg:text-6xl tracking-wider absolute bottom-[25%] left-[10%] z-10 text-white">
                         Capturing Your Special Moments
                     </div>
                 </SwiperSlide>
@@ -66,7 +66,7 @@ const BannerSlider = () => {
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/10"></div>
-                    <div className="slide-content text-4xl lg:text-6xl tracking-wider absolute bottom-[25%] left-[10%] z-10 text-white">
+                    <div className="slide-content font-sans text-4xl lg:text-6xl tracking-wider absolute bottom-[25%] left-[10%] z-10 text-white">
                         Your Dream Wedding, Our Lens
                     </div>
                 </SwiperSlide>
