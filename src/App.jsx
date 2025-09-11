@@ -6,6 +6,7 @@ import Navbar from './component/Navbar'
 import Hero from './component/BannerSlider'
 import BannerSlider from './component/BannerSlider'
 import WeddingCrew from './component/WeddingCrew'
+import WeddingFilm from './component/WeddingFilm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
     <Navbar></Navbar>
     <BannerSlider></BannerSlider>
     <WeddingCrew></WeddingCrew>
+    <WeddingFilm></WeddingFilm>
       
         
     </> )
