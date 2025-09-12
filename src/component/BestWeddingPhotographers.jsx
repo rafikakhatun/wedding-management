@@ -8,7 +8,7 @@ import BestWeddingPhotographersBlog1 from "../assets/home/blogs (1).jpg";
 import BestWeddingPhotographersBlog2 from "../assets/home/blogs (2).jpg";
 import BestWeddingPhotographersBlog3 from "../assets/home/blogs (3).jpg";
 
-export default function BestWeddingPhotographers() {
+ function BestWeddingPhotographers() {
   return (
     <section>
       {/* Header Section */}
@@ -87,3 +87,4 @@ export default function BestWeddingPhotographers() {
     </section>
   );
 }
+export default BestWeddingPhotographers;
