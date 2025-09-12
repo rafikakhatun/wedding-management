@@ -1,19 +1,23 @@
-import BestWeddingPhotographersLogo1 from "../assets/home/logo1.png"
-import BestWeddingPhotographersBlog1 from "../assets/home/blogs (1).jpg"
-import BestWeddingPhotographersBlog2 from "../assets/home/blogs (2).jpg"
-import BestWeddingPhotographersBlog3 from "../assets/home/blogs (3).jpg"
-import BestWeddingPhotographersBlog3 from "../assets/home/blogs (3).jpg"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
+import BestWeddingPhotographersLogo1 from "../assets/home/logo1.png";
+import BestWeddingPhotographersBlog1 from "../assets/home/blogs (1).jpg";
+import BestWeddingPhotographersBlog2 from "../assets/home/blogs (2).jpg";
+import BestWeddingPhotographersBlog3 from "../assets/home/blogs (3).jpg";
 
 export default function BestWeddingPhotographers() {
   return (
     <section>
+      {/* Header Section */}
       <div className="text-center w-11/12 mx-auto mb-12">
         <div className="flex justify-center mb-4">
           <img
-            src={BestWeddingPhotographersLogo1 }
+            src={BestWeddingPhotographersLogo1}
             alt="Camera Icon"
-            className="h-14 w-full object-contain"
+            className="h-14 w-auto object-contain"
           />
         </div>
         <h1 className="text-2xl font-lora lg:text-4xl font-bold text-[#131450] mb-2">
@@ -27,44 +31,53 @@ export default function BestWeddingPhotographers() {
         </p>
       </div>
 
-      {/* content start here */}
+      {/* Swiper Section */}
       <div className="container mx-auto px-4 relative py-8 overflow-hidden">
-        <div className="my-swiper-container swiper-container">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide my-swiper-slide rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={BestWeddingPhotographersBlog1}
-                alt="Couple from Kolkata"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="swiper-slide my-swiper-slide rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={BestWeddingPhotographersBlog2}
-                alt="Couple from Kolkata"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="swiper-slide my-swiper-slide rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={BestWeddingPhotographersBlog3}
-                alt="Couple from Kolkata"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="swiper-slide my-swiper-slide rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={BestWeddingPhotographersBlog3}
-                alt="Couple from Kolkata"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
+        <Swiper
+          modules={[Navigation]}
+          navigation
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="rounded-lg"
+        >
+          <SwiperSlide className="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src={BestWeddingPhotographersBlog1}
+              alt="Couple from Kolkata"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
 
-          <div className="swiper-button-prev"></div>
-          <div className="swiper-button-next"></div>
-        </div>
+          <SwiperSlide className="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src={BestWeddingPhotographersBlog2}
+              alt="Couple from Kolkata"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
 
+          <SwiperSlide className="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src={BestWeddingPhotographersBlog3}
+              alt="Couple from Kolkata"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide className="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src={BestWeddingPhotographersBlog3}
+              alt="Couple from Kolkata"
+              className="w-full h-auto object-cover"
+            />
+          </SwiperSlide>
+        </Swiper>
+
+        {/* Button */}
         <div className="text-center mt-10">
           <button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:from-purple-700 hover:to-pink-600 transition duration-300">
             See Them All
