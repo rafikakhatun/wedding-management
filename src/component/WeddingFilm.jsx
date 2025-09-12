@@ -1,13 +1,13 @@
-import React from "react";
+import WeddingFilmFrame from "../assets/home/Frame.png"
 
  function WeddingFilm() {
   return (
     <section
       className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('./asstes/home/wedding-filem.png')" }}
+      style={{ backgroundImage: "url('src/assets/home/wedding-filem.png')" }}
     >
       <img
-        src="./asstes/home/Frame.png"
+        src={WeddingFilmFrame}
         className="w-full absolute left-0 right-0 -top-3 md:-top-7 lg:-top-12"
         alt="top-img"
       />
