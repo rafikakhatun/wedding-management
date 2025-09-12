@@ -2,7 +2,7 @@ import WeddingLookSectionBg1 from "../assets/home/bg1.png"
 import WeddingLookSectionBg2 from "../assets/home/bg2.png"
 
 
-export default function WeddingLookSection() {
+ function WeddingLookSection() {
   return (
     <div className="min-h-[50vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 background-pattern relative">
       <img
@@ -45,3 +45,4 @@ export default function WeddingLookSection() {
     </div>
   );
 }
+export default WeddingLookSection;
