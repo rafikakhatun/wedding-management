@@ -19,7 +19,8 @@ function App() {
     <WeddingFilm></WeddingFilm>
       
         
-    </> )
+    </>
+     )
 }
 
 export default App
