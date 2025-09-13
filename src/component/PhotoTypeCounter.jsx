@@ -6,7 +6,7 @@ import React from "react";
 
 export default function PhotoTypeCounter() {
   return (
-    // photo type counter start here
+    
     <section className="bg-white py-10">
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6">
@@ -76,6 +76,6 @@ export default function PhotoTypeCounter() {
         </div>
       </div>
     </section>
-    // photo type counter end here
+    
   );
 }
