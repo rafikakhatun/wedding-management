@@ -14,6 +14,7 @@ import PlanMarriagePhotography from './component/PlanMarriagePhotography'
 import OurClientSay from './component/OurClientSay'
 import EternalEchoes from './component/ EternalEchoes'
 import OtherPhotographyServices from './component/OtherPhotographyServices'
+import PhotoTypeCounter from './component/PhotoTypeCounter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
     <OurClientSay></OurClientSay>
     <EternalEchoes></EternalEchoes> 
     <OtherPhotographyServices></OtherPhotographyServices>
+    <PhotoTypeCounter></PhotoTypeCounter>
       
         
     </>
