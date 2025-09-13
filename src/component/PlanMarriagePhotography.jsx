@@ -88,7 +88,7 @@ export default function PlanMarriagePhotography() {
               Submit
             </button>
           </div>
-        </form>
+        </form> 
       </div>
 
       <img
