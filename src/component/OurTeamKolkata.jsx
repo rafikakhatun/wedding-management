@@ -2,7 +2,7 @@ import React from "react";
 import OurTeamImage from "../assets/home/aafeewr 1.png";
 import OurTeamLogo from "../assets/home/logo1.png";
 
-export default function OurTeamKolkata() {
+ function OurTeamKolkata() {
   return (
     <section className="pb-10">
       <div className="container mx-auto px-4">
@@ -52,3 +52,5 @@ export default function OurTeamKolkata() {
     </section>
   );
 }
+
+export default OurTeamKolkata;

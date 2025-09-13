@@ -87,4 +87,4 @@ import BestWeddingPhotographersBlog3 from "../assets/home/blogs (3).jpg";
     </section>
   );
 }
-export default BestWeddingPhotographers;
+export default BestWeddingPhotographers; 

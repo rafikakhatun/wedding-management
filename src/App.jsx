@@ -9,6 +9,7 @@ import WeddingFilm from './component/WeddingFilm'
 import WeddingLookSection from './component/WeddingLookSection'
 import BestWeddingPhotographers from './component/BestWeddingPhotographers'
 import OurTeamKolkata from './component/OurTeamKolkata'
+import WhyChooseWeddingCrew from './component/WhyChooseWeddingCrew'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
     <WeddingLookSection></WeddingLookSection>
     <BestWeddingPhotographers></BestWeddingPhotographers>
     <OurTeamKolkata></OurTeamKolkata>
+    <WhyChooseWeddingCrew></WhyChooseWeddingCrew>
       
         
     </>
