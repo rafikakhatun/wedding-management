@@ -1,9 +1,8 @@
-import React from "react";
 import logo1 from "../assets/home/logo1.png";
 import group28 from "../assets/home/Group 28.png";
 import group29 from "../assets/home/Group 29.png";
 
-export default function WhyChooseWeddingCrew() {
+ function WhyChooseWeddingCrew() {
   return (
     <section className="pb-10 w-11/12 mx-auto">
       {/* heading text */}
@@ -148,3 +147,5 @@ export default function WhyChooseWeddingCrew() {
     </section>
   );
 }
+
+export default WhyChooseWeddingCrew;
