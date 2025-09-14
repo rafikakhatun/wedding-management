@@ -6,7 +6,7 @@ import Blog1 from "../assets/home/blogs (2).jpg";
 import Blog2 from "../assets/home/blogs (3).jpg";
 import Blog3 from "../assets/home/blogs (1).jpg";
 
-export default function BlogSection() {
+ function BlogSection() {
   return (
     <section className="relative pb-10">
       {/* heading text */}
@@ -94,3 +94,5 @@ export default function BlogSection() {
     </section>
   );
 }
+
+export default BlogSection;
