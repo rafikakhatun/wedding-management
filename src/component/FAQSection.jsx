@@ -2,7 +2,7 @@
 import Logo1 from "../assets/home/logo1.png";
 import Group41 from "../assets/home/Group 41.png";
 
-export default function FAQSection() {
+ function FAQSection() {
   return (
     <section className="pb-10">
       <div className="w-11/12 mx-auto">
@@ -231,3 +231,5 @@ export default function FAQSection() {
     </section>
   );
 }
+
+export default FAQSection;
