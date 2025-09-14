@@ -4,7 +4,7 @@ import React from "react";
 import Frame from "../assets/home/Frame.png";
 //import FooterIcon from "../assets/storie/footericon.png";
 
-export default function Footer() {
+ function Footer() {
   return (
     <footer className="bg-[#2F067B] text-white relative overflow-hidden">
       <img
@@ -135,3 +135,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;
