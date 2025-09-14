@@ -13,7 +13,7 @@ import Photo1 from "../assets/home/photo (1).png";
 import Photo2 from "../assets/home/photo (2).png";
 import Photo3 from "../assets/home/photo (3).png";
 
-export default function PreWeddingWeddingShoots() {
+export default function PreWeddingShoots() {
   return (
     <section className="pb-10 relative">
       <img
