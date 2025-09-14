@@ -18,6 +18,7 @@ import PhotoTypeCounter from './component/PhotoTypeCounter'
 import PreWeddingShoots from './component/PreWeddingShoots'
 import FAQSection from './component/FAQSection'
 import BlogSection from './component/BlogSection'
+import Footer from './component/Footer'
 
 
 
@@ -42,6 +43,7 @@ function App() {
     <PreWeddingShoots></PreWeddingShoots>
     <FAQSection></FAQSection>
     <BlogSection></BlogSection>
+    <Footer></Footer>
     
     
       
