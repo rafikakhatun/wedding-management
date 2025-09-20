@@ -90,7 +90,8 @@ export default function DashboardLayout() {
           </main>
         </div>
       </div>
-      <ConfirmationModal
+
+       <ConfirmationModal
         isOpen={isLogoutModalOpen}
         onConfirm={confirmLogout}
         onCancel={() => setIsLogoutModalOpen(false)}
@@ -100,6 +101,7 @@ export default function DashboardLayout() {
         icon={LogOut}
         variant="danger"
       />
+     
     </>
   );
 }
