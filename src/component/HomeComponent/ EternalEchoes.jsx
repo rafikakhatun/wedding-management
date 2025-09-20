@@ -1,6 +1,6 @@
 import React from "react";
-import frameImg from "../assets/home/Frame.png";
-import weddingImg from "../assets/home/wedding6.jpg";
+import frameImg from "../../assets/home/Frame.png";
+import weddingImg from "../../assets/home/wedding6.jpg";
 
 const EternalEchoes = () => {
   return (

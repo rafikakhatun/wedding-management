@@ -1,7 +1,7 @@
 import React from "react";
 
 // images import
-import Frame from "../assets/home/Frame.png";
+import Frame from "../../assets/home/Frame.png";
 //import FooterIcon from "../assets/storie/footericon.png";
 
  function Footer() {

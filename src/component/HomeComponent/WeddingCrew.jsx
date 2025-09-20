@@ -1,11 +1,11 @@
 import React from "react";
-import logo1 from "../assets/home/logo1.png";
-import wedding from "../assets/home/wedding.png";
-import wedding3 from "../assets/home/wedding3.jpg";
-import wedding6 from "../assets/home/wedding6.jpg";
-import wedding5 from "../assets/home/wedding5.png";
-import wedding2 from "../assets/home/wedding2.jpg";
-import wedding4 from "../assets/home/wedding4.png";
+import logo1 from "../../assets/home/logo1.png";
+import wedding from "../../assets/home/wedding.png";
+import wedding3 from "../../assets/home/wedding3.jpg";
+import wedding6 from "../../assets/home/wedding6.jpg";
+import wedding5 from "../../assets/home/wedding5.png";
+import wedding2 from "../../assets/home/wedding2.jpg";
+import wedding4 from "../../assets/home/wedding4.png";
 
 const WeddingCrew = () => {
   return (

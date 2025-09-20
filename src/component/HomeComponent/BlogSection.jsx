@@ -1,10 +1,10 @@
 import React from "react";
 
 // images import
-import Logo from "../assets/home/logo1.png";
-import Blog1 from "../assets/home/blogs (2).jpg";
-import Blog2 from "../assets/home/blogs (3).jpg";
-import Blog3 from "../assets/home/blogs (1).jpg";
+import Logo from "../../assets/home/logo1.png";
+import Blog1 from "../../assets/home/blogs (2).jpg";
+import Blog2 from "../../assets/home/blogs (3).jpg";
+import Blog3 from "../../assets/home/blogs (1).jpg";
 
  function BlogSection() {
   return (

@@ -1,5 +1,5 @@
-import WeddingLookSectionBg1 from "../assets/home/bg1.png"
-import WeddingLookSectionBg2 from "../assets/home/bg2.png"
+import WeddingLookSectionBg1 from "../../assets/home/bg1.png"
+import WeddingLookSectionBg2 from "../../assets/home/bg2.png"
 
 
  function WeddingLookSection() {

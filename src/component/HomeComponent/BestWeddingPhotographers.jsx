@@ -3,10 +3,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-import BestWeddingPhotographersLogo1 from "../assets/home/logo1.png";
-import BestWeddingPhotographersBlog1 from "../assets/home/blogs (1).jpg";
-import BestWeddingPhotographersBlog2 from "../assets/home/blogs (2).jpg";
-import BestWeddingPhotographersBlog3 from "../assets/home/blogs (3).jpg";
+import BestWeddingPhotographersLogo1 from "../../assets/home/logo1.png";
+import BestWeddingPhotographersBlog1 from "../../assets/home/blogs (1).jpg";
+import BestWeddingPhotographersBlog2 from "../../assets/home/blogs (2).jpg";
+import BestWeddingPhotographersBlog3 from "../../assets/home/blogs (3).jpg";
 
  function BestWeddingPhotographers() {
   return (

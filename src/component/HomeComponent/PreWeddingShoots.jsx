@@ -5,13 +5,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Images
-import Frame from "../assets/home/Frame.png";
-import Logo from "../assets/home/logo1.png";
-import Bg1 from "../assets/home/bg1.png";
-import Bg2 from "../assets/home/bg2.png";
-import Photo1 from "../assets/home/photo (1).png";
-import Photo2 from "../assets/home/photo (2).png";
-import Photo3 from "../assets/home/photo (3).png";
+import Frame from "../../assets/home/Frame.png";
+import Logo from "../../assets/home/logo1.png";
+import Bg1 from "../../assets/home/bg1.png";
+import Bg2 from "../../assets/home/bg2.png";
+import Photo1 from "../../assets/home/photo (1).png";
+import Photo2 from "../../assets/home/photo (2).png";
+import Photo3 from "../../assets/home/photo (3).png";
 
 export default function PreWeddingShoots() {
   return (

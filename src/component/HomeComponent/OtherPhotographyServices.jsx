@@ -1,9 +1,9 @@
 import React from "react";
-import logo1 from "../assets/home/logo1.png";
-import other from "../assets/home/other.jpg";
-import other1 from "../assets/home/other1 (1).jpg";
-import other2 from "../assets/home/other1 (2).jpg";
-import other3 from "../assets/home/other1 (3).jpg";
+import logo1 from "../../assets/home/logo1.png";
+import other from "../../assets/home/other.jpg";
+import other1 from "../../assets/home/other1 (1).jpg";
+import other2 from "../../assets/home/other1 (2).jpg";
+import other3 from "../../assets/home/other1 (3).jpg";
 
 const OtherPhotographyServices = () => {
   return (

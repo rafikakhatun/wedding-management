@@ -1,4 +1,4 @@
-import WeddingFilmFrame from "../assets/home/Frame.png"
+import WeddingFilmFrame from "../../assets/home/Frame.png"
 
  function WeddingFilm() {
   return (

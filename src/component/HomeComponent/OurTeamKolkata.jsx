@@ -1,6 +1,6 @@
 import React from "react";
-import OurTeamImage from "../assets/home/aafeewr 1.png";
-import OurTeamLogo from "../assets/home/logo1.png";
+import OurTeamImage from "../../assets/home/aafeewr 1.png";
+import OurTeamLogo from "../../assets/home/logo1.png";
 
  function OurTeamKolkata() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 //import formimg from "../assets/storie/formimg.jpg";
-import bgImg from "../assets/home/wedding.png"
-import Frame from "../assets/home/Frame.png";
+import bgImg from "../../assets/home/wedding.png"
+import Frame from "../../assets/home/Frame.png";
 
 export default function PlanMarriagePhotography() {
   return (

@@ -1,6 +1,6 @@
 // Import images
-import Logo1 from "../assets/home/logo1.png";
-import Group41 from "../assets/home/Group 41.png";
+import Logo1 from "../../assets/home/logo1.png";
+import Group41 from "../../assets/home/Group 41.png";
 
  function FAQSection() {
   return (

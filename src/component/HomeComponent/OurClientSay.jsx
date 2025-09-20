@@ -4,11 +4,11 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import logo1 from "../assets/home/logo1.png";
-import profile1 from "../assets/home/profile1 (1).png";
-import profile2 from "../assets/home/profile1 (2).png";
-import profile3 from "../assets/home/profile1 (3).png";
-import groupImg from "../assets/home/Group (3).png";
+import logo1 from "../../assets/home/logo1.png";
+import profile1 from "../../assets/home/profile1 (1).png";
+import profile2 from "../../assets/home/profile1 (2).png";
+import profile3 from "../../assets/home/profile1 (3).png";
+import groupImg from "../../assets/home/Group (3).png";
 
 export default function OurClientSay() {
   return (

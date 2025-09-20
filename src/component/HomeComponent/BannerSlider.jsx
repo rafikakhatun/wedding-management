@@ -1,7 +1,7 @@
 import React from "react";
-import banner1 from "../assets/home/banner1.jpg";
-import banner2 from "../assets/home/bannar2.jpg";
-import banner3 from "../assets/home/bannar3.jpg";
+import banner1 from "../../assets/home/banner1.jpg";
+import banner2 from "../../assets/home/bannar2.jpg";
+import banner3 from "../../assets/home/bannar3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
