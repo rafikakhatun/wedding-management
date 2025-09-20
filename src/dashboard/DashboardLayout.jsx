@@ -5,7 +5,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { 
   Home, Wallet, User, Settings, LogOut, Bell, Search, Menu, X 
 } from 'lucide-react';
-import ConfirmationModal from '../components/ConfirmationModal';
+import ConfirmationModal from './ConfirmationModal';
  
 
 export default function DashboardLayout() {
