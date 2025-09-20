@@ -90,17 +90,9 @@ export default function DashboardLayout() {
           </main>
         </div>
       </div>
+      
 
-       <ConfirmationModal
-        isOpen={isLogoutModalOpen}
-        onConfirm={confirmLogout}
-        onCancel={() => setIsLogoutModalOpen(false)}
-        title="Confirm Logout"
-        description="Are you sure you want to end your current session?"
-        confirmText="Yes, Logout"
-        icon={LogOut}
-        variant="danger"
-      />
+       
      
     </>
   );

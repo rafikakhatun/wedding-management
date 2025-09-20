@@ -8,6 +8,7 @@ export const router = createBrowserRouter([
         path:"/",
         element:<Home></Home>
     },
+    
      {
      path: '/admin/dashboard',
         element: <DashboardLayout />,
