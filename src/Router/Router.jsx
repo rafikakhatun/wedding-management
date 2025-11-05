@@ -4,6 +4,7 @@ import DashboardPage from "../dashboard/DashboardPage";
 import DashboardLayout from "../dashboard/DashboardLayout";
 import UserPage from "../dashboard/UserPage";
 import ProfilePage from "../dashboard/ProfilePage";
+import SettingsPage from "../dashboard/SettingsPage";
 
 
 export const router = createBrowserRouter([
@@ -31,6 +32,11 @@ export const router = createBrowserRouter([
             {
                 path:'/admin/dashboard/profile',
                 element:<ProfilePage></ProfilePage>
+            },
+
+            {
+                path:'/admin/dashboard/settings',
+                element:<SettingsPage></SettingsPage>
             }
             
         ]

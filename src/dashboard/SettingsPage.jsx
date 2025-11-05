@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Settings = () => {
+const SettingsPage = () => {
     return (
         <div>
             <h1>This is setting page </h1>
@@ -8,4 +8,4 @@ const Settings = () => {
     );
 };
 
-export default Settings;
+export default SettingsPage;
