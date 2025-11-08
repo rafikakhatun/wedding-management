@@ -6,6 +6,7 @@ import UserPage from "../dashboard/UserPage";
 import ProfilePage from "../dashboard/ProfilePage";
 import SettingsPage from "../dashboard/SettingsPage";
 import Login from "../component/HomeComponent/Login";
+import Register from "../component/HomeComponent/Register";
 
 
 export const router = createBrowserRouter([
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
         path:"/login",
         element:<Login></Login>
 
+    },
+
+    {
+        path:"/register",
+        element:<Register></Register>
     },
 
      {
