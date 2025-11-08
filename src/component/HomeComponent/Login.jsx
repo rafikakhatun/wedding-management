@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
-      <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl w-full max-w-md p-8">
+      <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl w-full max-w-lg p-8">
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <div className="bg-indigo-600 text-white p-3 rounded-full mb-3 shadow-md">
