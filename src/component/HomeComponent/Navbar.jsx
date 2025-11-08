@@ -55,9 +55,9 @@ const Navbar = () => {
                     <a href="#" className="text-white hover:text-gray-300 transition duration-300">About</a>
                     <a href="#" className="text-white hover:text-gray-300 transition duration-300">Testimonials</a>
                     <a href="#" className="text-white hover:text-gray-300 transition duration-300">Contact Us</a>
-                    <Link>
-                    <button className="hidden md:block py-1 px-5 bg-white text-pink-700 border border-pink-700 rounded-md cousor-pointer">Login</button>                                        
-                    </Link>
+                    
+                    <Link className="hidden md:block py-1 px-5 bg-white text-pink-700 border border-pink-700 rounded-md cousor-pointer">Login</Link>                                        
+                    
                 </div>
 
 
@@ -90,9 +90,9 @@ const Navbar = () => {
                     <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700 transition duration-300">About</a>
                     <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700 transition duration-300">Testimonials</a>
                     <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700 transition duration-300">Contact Us</a>
-                    <Link>
-                    <button className="block md:hidden p-4 py-2 w-11/12 mx-auto bg-white text-pink-600 rounded-lg mt-4">Login</button>                                        
-                    </Link>
+                    
+                    <Link className="block md:hidden p-4 py-2 w-11/12 mx-auto text-center bg-white text-pink-600 rounded-lg mt-4">Login</Link>                                        
+                    
                     <div className="flex justify-center space-x-6 py-4">
                         <a href="#" className="text-white hover:text-gray-300 transition duration-300">
                             <img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" alt="Facebook" className="h-7 w-7" />
