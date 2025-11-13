@@ -4,6 +4,17 @@ import { Link } from "react-router";
 
 const Register = () => {
 
+const [isLoading,setLoading] = useSate(false);
+const [error,setError] = useSate(null);
+const [success,setSuccess] = useSate(null)
+
+
+
+
+
+
+
+
   //  formData state to handle user input
   const [formData, setFormData] = useState({
     name: '',
