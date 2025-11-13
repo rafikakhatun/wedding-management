@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/home/logo.png"
-import { Link } from "react-router";
 import { User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +78,7 @@ const Navbar = () => {
                         <img src="https://img.icons8.com/ios-glyphs/30/ffffff/whatsapp.png" alt="WhatsApp" className="h-6 w-6" />
                     </a>
                     {/*Login*/}
-                    <Link to="/login" className="hover:text-gray-300 transition duration-300"><User size={24} color="white" />
+                    <Link to="/register" className="hover:text-gray-300 transition duration-300"><User size={24} color="white" />
                     </Link>
 
                 </div>
@@ -96,7 +96,7 @@ const Navbar = () => {
                     <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700 transition duration-300">Testimonials</a>
                     <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700 transition duration-300">Contact Us</a>
 
-                    <Link to="/login" className="block md:hidden p-4 py-2 w-11/12 mx-auto text-center bg-white text-pink-600 rounded-lg mt-4">Login</Link>
+                    <Link to="/register" className="block md:hidden p-4 py-2 w-11/12 mx-auto text-center bg-white text-pink-600 rounded-lg mt-4">Login</Link>
 
                     <div className="flex justify-center space-x-6 py-4">
                         <a href="#" className="text-white hover:text-gray-300 transition duration-300">

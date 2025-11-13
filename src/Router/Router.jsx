@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+
 import Home from "../page/Home";
 import DashboardPage from "../dashboard/DashboardPage";
 import DashboardLayout from "../dashboard/DashboardLayout";
@@ -7,6 +7,9 @@ import ProfilePage from "../dashboard/ProfilePage";
 import SettingsPage from "../dashboard/SettingsPage";
 import Login from "../component/HomeComponent/Login";
 import Register from "../component/HomeComponent/Register";
+import { createBrowserRouter } from "react-router-dom";
+
+
 
 
 export const router = createBrowserRouter([
