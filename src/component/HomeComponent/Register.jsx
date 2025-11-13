@@ -1,7 +1,19 @@
 import { UserPlus } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router";
 
 const Register = () => {
+
+  const [formData,setFormData]= useState({
+    name:'',
+    email:'',
+    password:'',
+    age:'',
+    gender:''
+  });
+
+
+  
 
 
 
@@ -32,6 +44,8 @@ const Register = () => {
               type="text"
               id="name"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Enter your full name"
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
@@ -44,6 +58,8 @@ const Register = () => {
               type="email"
               id="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Enter your Email"
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
@@ -56,6 +72,8 @@ const Register = () => {
               type="password"
               id="passsword"
               name="password"
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Enter Your password"
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
@@ -68,6 +86,8 @@ const Register = () => {
               type="number"
               id="number"
               name="number"
+              value={formData.number}
+              onChange={handleChange}
               placeholder="Enter your age"
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
@@ -79,6 +99,8 @@ const Register = () => {
             <select
             id="gender"
             name="gender"
+            value={formData.gender}
+            onChange={handleChange}
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
               defaultValue=""
             >
