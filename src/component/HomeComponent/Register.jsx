@@ -4,16 +4,23 @@ import { Link } from "react-router";
 
 const Register = () => {
 
-  const [formData,setFormData]= useState({
-    name:'',
-    email:'',
-    password:'',
-    age:'',
-    gender:''
+  //  formData state to handle user input
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    age: '',
+    gender: ''
   });
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  };
 
-  
+
+
+
+
 
 
 
@@ -97,10 +104,10 @@ const Register = () => {
           <div>
             <label className="block text-gray-700 text-sm mb-1">Gender</label>
             <select
-            id="gender"
-            name="gender"
-            value={formData.gender}
-            onChange={handleChange}
+              id="gender"
+              name="gender"
+              value={formData.gender}
+              onChange={handleChange}
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
               defaultValue=""
             >
