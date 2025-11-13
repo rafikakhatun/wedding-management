@@ -97,9 +97,9 @@ const Register = () => {
             <label className="block text-gray-700 text-sm mb-1">Age</label>
             <input
               type="number"
-              id="number"
-              name="number"
-              value={formData.number}
+              id="age"
+              name="age"
+              value={formData.age}
               onChange={handleChange}
               placeholder="Enter your age"
               className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -128,7 +128,7 @@ const Register = () => {
 
           {/* Submit Button */}
           <button
-            type="button"
+            type="submit"
             className="w-full bg-indigo-600 text-white py-2.5 rounded-lg hover:bg-indigo-700 transition-all duration-200 font-semibold shadow-md"
           >
             Register
