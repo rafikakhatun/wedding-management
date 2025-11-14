@@ -38,11 +38,11 @@ const Register = () => {
 
     try {
 
-      const response = await fetch('http://localhost:6000/api/users/create', {
+      const response = await fetch('http://localhost:5001/api/users/create', {
 
         method: 'POST',
         headers: {
-          'content-Type': "application/json"
+          'content-Type': "application/json",
         },
 
         body: JSON.stringify(formData),
