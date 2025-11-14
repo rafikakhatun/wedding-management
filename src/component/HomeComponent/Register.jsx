@@ -172,6 +172,11 @@ const Register = () => {
             </select>
           </div>
 
+          {/*error msg */}
+          {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
+
+          {/* */}
+
           {/* Submit Button */}
           <button
             type="submit"
