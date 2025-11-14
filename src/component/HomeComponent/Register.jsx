@@ -64,10 +64,12 @@ const Register = () => {
       setError(error.message || 'An unexpected error occured');
 
 
+    }finally{
+      setLoading(flase);
     }
 
 
-  }
+  };
 
 
 
