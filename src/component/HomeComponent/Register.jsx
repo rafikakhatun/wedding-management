@@ -55,7 +55,16 @@ const Register = () => {
       }
 
       const result = await response.json();
-      setSuccess(result.message || 'Registration Successful') 
+      setSuccess(result.message || 'Registration Successful')
+
+      setFormData({
+        name: '',
+        email: '',
+        password: '',
+        age: '',
+        gender: ''
+      })
+
 
 
 
@@ -64,8 +73,8 @@ const Register = () => {
       setError(error.message || 'An unexpected error occured');
 
 
-    }finally{
-      setLoading(flase);
+    } finally {
+      setLoading(false);
     }
 
 
