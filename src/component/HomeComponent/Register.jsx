@@ -4,9 +4,9 @@ import { Link } from "react-router";
 
 const Register = () => {
 
-const [isLoading,setLoading] = useSate(false);
-const [error,setError] = useSate(null);
-const [success,setSuccess] = useSate(null)
+  const [isLoading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null)
 
 
 
@@ -28,10 +28,45 @@ const [success,setSuccess] = useSate(null)
     setFormData({ ...formData, [e.target.name]: e.target.value })
   };
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Register form Data:', formData);
-    alert('Register successful')
+
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    try {
+
+      const response = await fetch('http://localhost:6000/api/users/create', {
+
+        method: 'POST',
+        headers: {
+          'content-Type': "application/json"
+        },
+
+        body: JSON.stringify(formData),
+
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'filed to Register user')
+      }
+
+      const result = await response.json();
+      setSuccess(result.message || 'Registration Successful') 
+
+
+
+    } catch (error) {
+
+      setError(error.message || 'An unexpected error occured');
+
+
+    }
+
+
   }
 
 
@@ -94,7 +129,7 @@ const [success,setSuccess] = useSate(null)
             <label className="block text-gray-700 text-sm mb-1">Password</label>
             <input
               type="password"
-              id="passsword"
+              id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
