@@ -183,6 +183,17 @@ const Register = () => {
             </select>
           </div>
 
+          {/* Image*/}
+          <div>
+            <label htmlFor="profileImage" className="block text-gray-700 text-sm mb-1">
+              Profile Image
+            </label>
+
+            <input className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              type="file" name="profileImage" id="profileImage" accept="image/png, image/jpeg, image/jpg" />
+
+          </div>
+
           {/*error msg */}
           {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
 
