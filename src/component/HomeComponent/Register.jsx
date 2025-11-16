@@ -7,7 +7,7 @@ const Register = () => {
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const [profileImageFile,setProfileImage] = useState(null)
+  const [profileImageFile, setProfileImageFile] = useState(null)
 
 
 
@@ -25,6 +25,12 @@ const Register = () => {
     gender: ''
   });
 
+  // image upload
+  const handleFileChange = (e) => {
+    setProfileImageFile(e.target.file[0]);
+
+  }
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   };
@@ -37,16 +43,29 @@ const Register = () => {
     setError(null);
     setSuccess(null);
 
+    const submissionData = new FormData();
+    submissionData.append("name", formData.name);
+    submissionData.append("email", formData.email);
+    submissionData.append("password", formData.password);
+    submissionData.append("age", formData.age);
+    submissionData.append("gender", formData.gender);
+
+    if(profileImageFile){
+      submissionData.append('profileImage',profileImageFile)
+    }
+
+
+
     try {
 
       const response = await fetch('http://localhost:5001/api/users/create', {
 
         method: 'POST',
-        headers: {
-          'content-Type': "application/json",
-        },
+       // headers: {
+       //   'content-Type': "application/json",
+      //  },
 
-        body: JSON.stringify(formData),
+       body: submissionData,
 
       });
 
