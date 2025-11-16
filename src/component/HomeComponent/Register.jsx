@@ -6,7 +6,8 @@ const Register = () => {
 
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null)
+  const [success, setSuccess] = useState(null);
+  const [profileImageFile,setProfileImage] = useState(null)
 
 
 
@@ -189,7 +190,7 @@ const Register = () => {
               Profile Image
             </label>
 
-            <input className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            <input onChange={handleFileChange} className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               type="file" name="profileImage" id="profileImage" accept="image/png, image/jpeg, image/jpg" />
 
           </div>
