@@ -27,7 +27,7 @@ const Register = () => {
 
   // image upload
   const handleFileChange = (e) => {
-    setProfileImageFile(e.target.file[0]);
+    setProfileImageFile(e.target.files[0]);
 
   }
 
