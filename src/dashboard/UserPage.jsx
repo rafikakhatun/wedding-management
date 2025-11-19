@@ -6,6 +6,12 @@ const UserPage = () => {
 
     const [user, setUser] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
+    const [error,setError] = useState(null)
+
+
+    // all user get api call
+    
+
 
     // pdf and excel logic
     const handleExport = (name) => {
@@ -18,7 +24,7 @@ const UserPage = () => {
     return (
 
 
-
+       
 
 
         <>
