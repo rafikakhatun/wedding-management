@@ -1,6 +1,6 @@
 import { FileText, Loader2, Sheet } from "lucide-react";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const UserPage = () => {
 
@@ -10,7 +10,34 @@ const UserPage = () => {
 
 
     // all user get api call
-    
+    const fetchUser = async ()=>{
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const response = await fetch('http://localhost:5001/api/users/all')
+            if(!response.ok)
+            {
+                throw new error('Failed to fetch users data')
+            }
+
+            const data = await response.json();
+            setUser(data)
+            
+        } catch (error) {
+            setError(error.message);
+            setUser([])
+            
+        }finally{
+            setIsLoading(false);
+        }
+    }
+
+    useEffect(()=>{
+        fetchUser()
+
+    },[])
+
 
 
     // pdf and excel logic
