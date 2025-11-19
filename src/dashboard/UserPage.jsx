@@ -17,7 +17,7 @@ const UserPage = () => {
         try {
             const response = await fetch('http://localhost:5001/api/users/all')
             if (!response.ok) {
-                throw new error('Failed to fetch users data')
+                throw new Error('Failed to fetch users data')
             }
 
             const data = await response.json();
@@ -37,7 +37,7 @@ const UserPage = () => {
     useEffect(() => {
         fetchUser()
 
-    }, [fetchUser])
+    }, [])
 
 
 
@@ -79,7 +79,7 @@ const UserPage = () => {
 
                     {/*for Loading*/}
                     {
-                        isLoading && user.length > 0 && (
+                        isLoading && users.length > 0 && (
                             <div className="flex justify-center items-center mb-4 text-slate-500">
                                 <Loader2 className="w-4 h-4 animate-spin" ></Loader2>
                                 processing....
@@ -115,19 +115,19 @@ const UserPage = () => {
                         {/*Table body */}
                         <tbody className="bg-white divide-y divide-slate-200">
                             {
-                                users.map((user) => {
+                                users.map((user) => (
                                     <tr key={user._id} className="hover:bg-slate-100">
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">image</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">rafika khatun</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">rafikakhatun607@gmail.com</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">25</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">female</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Action</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.profileImage}</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.name}</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.email}</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.age}</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Delete</td>
 
 
                                     </tr>
-                                })
+                                ))
                             }
                         </tbody>
 
