@@ -117,7 +117,9 @@ const UserPage = () => {
                             {
                                 users.map((user) => (
                                     <tr key={user._id} className="hover:bg-slate-100">
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.profileImage}</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
+                                            <img src={user.profileImage} alt="" className="w-10 h-10 rounded-full object-cover" />
+                                        </td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.name}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.email}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.age}</td>
