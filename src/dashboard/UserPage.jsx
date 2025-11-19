@@ -4,39 +4,40 @@ import React, { useEffect, useState } from 'react';
 
 const UserPage = () => {
 
-    const [user, setUser] = useState(0)
+    const [users, setUser] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    const [error,setError] = useState(null)
+    const [error, setError] = useState(null)
 
 
     // all user get api call
-    const fetchUser = async ()=>{
+    const fetchUser = async () => {
         setIsLoading(true);
         setError(null);
 
         try {
             const response = await fetch('http://localhost:5001/api/users/all')
-            if(!response.ok)
-            {
+            if (!response.ok) {
                 throw new error('Failed to fetch users data')
             }
 
             const data = await response.json();
             setUser(data)
-            
+
         } catch (error) {
             setError(error.message);
             setUser([])
-            
-        }finally{
+
+        } finally {
             setIsLoading(false);
         }
     }
 
-    useEffect(()=>{
+    console.log(users)
+
+    useEffect(() => {
         fetchUser()
 
-    },[])
+    }, [fetchUser])
 
 
 
@@ -51,7 +52,7 @@ const UserPage = () => {
     return (
 
 
-       
+
 
 
         <>
@@ -113,17 +114,21 @@ const UserPage = () => {
 
                         {/*Table body */}
                         <tbody className="bg-white divide-y divide-slate-200">
-                            <tr className="hover:bg-slate-100">
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">image</td>
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">rafika khatun</td>
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">rafikakhatun607@gmail.com</td>
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">25</td>
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">female</td>
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Action</td>
-                                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Delete</td>
+                            {
+                                users.map((user) => {
+                                    <tr key={user._id} className="hover:bg-slate-100">
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">image</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">rafika khatun</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">rafikakhatun607@gmail.com</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">25</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">female</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Action</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Delete</td>
 
 
-                            </tr>
+                                    </tr>
+                                })
+                            }
                         </tbody>
 
 
