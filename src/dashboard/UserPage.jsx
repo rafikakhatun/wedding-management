@@ -48,6 +48,14 @@ const UserPage = () => {
 
     }
 
+    // Handles delete action when the delete button is clicked
+
+    const handleDeleteClick = ()=>{
+        alert("delete")
+
+    }
+
+
 
     return (
 
@@ -126,7 +134,7 @@ const UserPage = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
-                                            <button className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
+                                            <button onClick={handleDeleteClick} className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
 
                                         </td>
 
