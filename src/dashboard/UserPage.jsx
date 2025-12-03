@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 
 const UserPage = () => {
 
-    const [users, setUser] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
-    const [error, setError] = useState(null)
+    const [users, setUser] = useState([]) // user state
+    const [isLoading, setIsLoading] = useState(false) // loader state
+    const [error, setError] = useState(null) // error msg state
 
 
     // all user get api call
@@ -134,7 +134,7 @@ const UserPage = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
-                                            <button onClick={handleDeleteClick} className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
+                                            <button onClick={()=>handleDeleteClick(user)} className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
 
                                         </td>
 
