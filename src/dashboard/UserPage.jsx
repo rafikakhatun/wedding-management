@@ -52,7 +52,7 @@ const [isOpen,setIsOpen] = useState(false);
     // Handles delete action when the delete button is clicked
 
     const handleDeleteClick = (user)=>{
-        alert("delete")
+        setIsOpen(true)
         console.log(user)
 
     }
