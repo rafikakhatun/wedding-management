@@ -1,4 +1,4 @@
-import { FileText, Loader2, Sheet } from "lucide-react";
+import { FileText, Loader2, Sheet, Trash2 } from "lucide-react";
 
 import React, { useEffect, useState } from 'react';
 
@@ -125,7 +125,10 @@ const UserPage = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.age}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">Delete</td>
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
+                                            <button className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
+
+                                        </td>
 
 
                                     </tr>
