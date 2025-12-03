@@ -1,10 +1,10 @@
-import { FileText, Loader2, Sheet, Trash2 } from "lucide-react";
+import { FileText, Loader2, Sheet, Smile, Trash2 } from "lucide-react";
 
 import React, { useEffect, useState } from 'react';
 import ConfirmationModal from "./ConfirmationModal";
 
 const UserPage = () => {
-const [isOpen,setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const [users, setUser] = useState([]) // user state
     const [isLoading, setIsLoading] = useState(false) // loader state
     const [error, setError] = useState(null) // error msg state
@@ -51,7 +51,7 @@ const [isOpen,setIsOpen] = useState(false);
 
     // Handles delete action when the delete button is clicked
 
-    const handleDeleteClick = (user)=>{
+    const handleDeleteClick = (user) => {
         setIsOpen(true)
         console.log(user)
 
@@ -136,7 +136,7 @@ const [isOpen,setIsOpen] = useState(false);
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
-                                            <button onClick={()=>handleDeleteClick(user)} className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
+                                            <button onClick={() => handleDeleteClick(user)} className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
 
                                         </td>
 
@@ -155,7 +155,16 @@ const [isOpen,setIsOpen] = useState(false);
 
             </div>
 
-            
+            {/*Renders a confirmation modal when isOpen is true. */}
+            <ConfirmationModal
+                isOpen={isOpen}
+                onCancel={() => setIsOpen(false)}
+                title="are you sure delete"
+                icon={Smile}
+                variant="danger"
+            ></ConfirmationModal>
+
+
 
         </>
     );
