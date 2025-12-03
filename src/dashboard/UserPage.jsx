@@ -40,6 +40,20 @@ const UserPage = () => {
 
     }, [])
 
+    // Handles delete action when the delete button is clicked
+
+    const handleDeleteClick = (user) => {
+        setIsOpen(true)
+        console.log(user)
+
+    }
+
+    // This function is called when the user confirms deletion in the modal.
+    const confirnDelete = () => {
+        alert("delete")
+    }
+
+
 
 
     // pdf and excel logic
@@ -49,13 +63,6 @@ const UserPage = () => {
 
     }
 
-    // Handles delete action when the delete button is clicked
-
-    const handleDeleteClick = (user) => {
-        setIsOpen(true)
-        console.log(user)
-
-    }
 
 
 
@@ -158,6 +165,7 @@ const UserPage = () => {
             {/*Renders a confirmation modal when isOpen is true. */}
             <ConfirmationModal
                 isOpen={isOpen}
+                onConfirm={confirnDelete}
                 onCancel={() => setIsOpen(false)}
                 title="are you sure delete"
                 icon={Smile}
