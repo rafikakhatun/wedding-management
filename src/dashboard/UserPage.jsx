@@ -50,8 +50,9 @@ const UserPage = () => {
 
     // Handles delete action when the delete button is clicked
 
-    const handleDeleteClick = ()=>{
+    const handleDeleteClick = (user)=>{
         alert("delete")
+        console.log(user)
 
     }
 
