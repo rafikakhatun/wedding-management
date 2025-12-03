@@ -8,6 +8,8 @@ const UserPage = () => {
     const [users, setUser] = useState([]) // user state
     const [isLoading, setIsLoading] = useState(false) // loader state
     const [error, setError] = useState(null) // error msg state
+    const [userToDelete,setUserToDelete] = useState(null) // State to store which user is to be deleted
+
 
 
     // all user get api call
@@ -44,13 +46,15 @@ const UserPage = () => {
 
     const handleDeleteClick = (user) => {
         setIsOpen(true)
-        console.log(user)
+        setUserToDelete(user)
 
     }
 
     // This function is called when the user confirms deletion in the modal.
     const confirnDelete = () => {
-        alert("delete")
+     setIsOpen(false);
+     console.log(userToDelete)
+        
     }
 
 
