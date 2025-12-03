@@ -1,9 +1,10 @@
 import { FileText, Loader2, Sheet, Trash2 } from "lucide-react";
 
 import React, { useEffect, useState } from 'react';
+import ConfirmationModal from "./ConfirmationModal";
 
 const UserPage = () => {
-
+const [isOpen,setIsOpen] = useState(false);
     const [users, setUser] = useState([]) // user state
     const [isLoading, setIsLoading] = useState(false) // loader state
     const [error, setError] = useState(null) // error msg state
@@ -154,7 +155,7 @@ const UserPage = () => {
 
             </div>
 
-
+            
 
         </>
     );
