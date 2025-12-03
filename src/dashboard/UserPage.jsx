@@ -58,13 +58,14 @@ const UserPage = () => {
         setIsLoading(true)
 
         try {
-            const response = await fetch(`http:localhost:5001/api/users/${userToDelete?._id}`, {
+            const response = await fetch(`http://localhost:5001/api/users/${userToDelete?._id}`, {
                 method: "DELETE"
             })
             if (response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to delete user")
             }
+            fetchUser();
         } catch (error) {
             setError(error.message)
         }finally{
