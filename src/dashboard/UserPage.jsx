@@ -171,7 +171,8 @@ const UserPage = () => {
                 isOpen={isOpen}
                 onConfirm={confirnDelete}
                 onCancel={() => setIsOpen(false)}
-                title="are you sure delete"
+                title="Confirm Delete"
+                description={`Are you sure you want to delete user:${userToDelete?.name}?`}
                 icon={Smile}
                 variant="danger"
             ></ConfirmationModal>
