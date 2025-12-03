@@ -51,9 +51,24 @@ const UserPage = () => {
     }
 
     // This function is called when the user confirms deletion in the modal.
-    const confirnDelete = () => {
+    const confirnDelete = async() => {
      setIsOpen(false);
      console.log(userToDelete)
+     if(!userToDelete) return;
+     setIsLoading(true)
+
+     try {
+        const response = await fetch(`http:localhost:5001/api/users/${userToDelete?._id}`,{
+            method:"DELETE"
+        })
+        if(response.ok){
+            const errorData = await response.json();
+            throw new Error(errorData.message || "Failed to delete user")
+        }
+     } catch (error) {
+        
+     }
+
         
     }
 
