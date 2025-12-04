@@ -94,10 +94,12 @@ const UserPage = () => {
             throw new Error(errorData.message || `Failed to update status to ${newStatus}`)
             
         }
+        fetchUser()
 
 
             
         } catch (error) {
+            setError(error.message)
             
         }
 
