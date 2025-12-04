@@ -81,6 +81,20 @@ const UserPage = () => {
         const newStatus = user.status === 'active' ? 'inactive':'active';
         setIsLoading(true);
         try {
+            const response = await fetch(`http://localhost:5001/api/users/${user._id}/status`,{
+                method:"PATCH",
+                headers:{
+                    'content-Type':'application/json',
+                },
+                body:JSON.stringify({status:newStatus}),
+        })
+        if(!response)
+        {
+            const errorData = await response.json();
+            throw new Error(errorData.message || `Failed to update status to ${newStatus}`)
+            
+        }
+
 
             
         } catch (error) {
