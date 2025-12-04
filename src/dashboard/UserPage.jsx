@@ -77,31 +77,28 @@ const UserPage = () => {
     }
 
     // status active and deactive
-    const handleStatusToggle = async (user)=>{
-        const newStatus = user.status === 'active' ? 'inactive':'active';
+    const handleStatusToggle = async (user) => {
+        const newStatus = user.status === 'active' ? 'inactive' : 'active';
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:5001/api/users/${user._id}/status`,{
-                method:"PATCH",
-                headers:{
-                    'content-Type':'application/json',
+            const response = await fetch(`http://localhost:5001/api/users/${user._id}/status`, {
+                method: "PATCH",
+                headers: {
+                    'content-Type': 'application/json',
                 },
-                body:JSON.stringify({status:newStatus}),
-        })
-        if(!response)
-        {
-            const errorData = await response.json();
-            throw new Error(errorData.message || `Failed to update status to ${newStatus}`)
-            
-        }
-        fetchUser()
+                body: JSON.stringify({ status: newStatus }),
+            })
+            if (!response) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || `Failed to update status to ${newStatus}`)
 
+            }
+            fetchUser()
 
-            
         } catch (error) {
             setError(error.message)
-            
-        }finally{
+
+        } finally {
             setIsLoading(false)
         }
 
@@ -200,7 +197,7 @@ const UserPage = () => {
 
                                             {/*active and inactive button */}
                                             <button
-                                            onClick={()=>handleStatusToggle(user)}
+                                                onClick={() => handleStatusToggle(user)}
                                                 className={`p-2 rounded-full transition-colors ${user.status === 'inactive' ? 'text-green-600 hover:bg-green-100' : 'text-red-600 hover:bg-red-100'}`}
                                                 title={user.status === 'inactive' ? 'user inactive' : 'user active'}
                                             >
