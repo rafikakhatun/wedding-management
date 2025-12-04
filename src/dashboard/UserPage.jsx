@@ -1,4 +1,4 @@
-import { FileText, Loader2, Sheet, Smile, Trash2 } from "lucide-react";
+import { FileText, Loader2, Sheet, Smile, Trash2, UserCheck, UserX } from "lucide-react";
 
 import React, { useEffect, useState } from 'react';
 import ConfirmationModal from "./ConfirmationModal";
@@ -65,10 +65,11 @@ const UserPage = () => {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to delete user")
             }
+
             fetchUser();
         } catch (error) {
             setError(error.message)
-        }finally{
+        } finally {
             setIsLoading(false)
         }
 
@@ -165,6 +166,14 @@ const UserPage = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
+                                            {/*active and inactive button */}
+                                            <button>
+                                                {user.status === 'inactive' ? (<UserCheck className="w-5 h-5"></UserCheck>) : (<UserX className="w-5 h-5"></UserX>)}
+                                            </button>
+
+
+
+                                            {/*delete button */}
                                             <button onClick={() => handleDeleteClick(user)} className="p-1 text-red-500 hover:text-red-700 rounded-full transition-colors"><Trash2 className="rounded-full w-5 h-5"></Trash2></button>
 
                                         </td>
