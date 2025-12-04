@@ -76,6 +76,12 @@ const UserPage = () => {
 
     }
 
+    // status active and deactive
+    const handleStatusToggle = async (user)=>{
+        console.log(user)
+
+    }
+
 
 
 
@@ -166,12 +172,17 @@ const UserPage = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
+
                                             {/*active and inactive button */}
                                             <button
+                                            onClick={()=>handleStatusToggle(user)}
                                                 className={`p-2 rounded-full transition-colors ${user.status === 'inactive' ? 'text-green-600 hover:bg-green-100' : 'text-red-600 hover:bg-red-100'}`}
                                                 title={user.status === 'inactive' ? 'user inactive' : 'user active'}
                                             >
-                                                {user.status === 'inactive' ? (<UserCheck className="w-5 h-5"></UserCheck>) : (<UserX className="w-5 h-5"></UserX>)}
+
+                                                {
+                                                    user.status === 'inactive' ? (<UserCheck className="w-5 h-5"></UserCheck>) : (<UserX className="w-5 h-5"></UserX>)
+                                                }
                                             </button>
 
 
