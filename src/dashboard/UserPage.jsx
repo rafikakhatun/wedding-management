@@ -192,7 +192,7 @@ const UserPage = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.email}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.age}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.gender}</td>
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">{user.status}</td>
+                                        <td className={`px-4 py-4 whitespace-nowrap text-sm font-medium ${user.status === 'active' ? 'text-green-600 ' : 'text-red-600'}`}>{user.status === 'active' ? 'active' : 'inactive'}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-slate-900 ">
 
                                             {/*active and inactive button */}
