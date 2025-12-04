@@ -78,7 +78,14 @@ const UserPage = () => {
 
     // status active and deactive
     const handleStatusToggle = async (user)=>{
-        console.log(user)
+        const newStatus = user.status === 'active' ? 'inactive':'active';
+        setIsLoading(true);
+        try {
+
+            
+        } catch (error) {
+            
+        }
 
     }
 
